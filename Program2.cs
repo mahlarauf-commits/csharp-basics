@@ -4,5 +4,9 @@ int i = int.Parse(Console.ReadLine());
 
 if (i > 0) ;
 {
-    Console.WriteLine("mosbat");
+    Console.WriteLine("positive");
+}
+else
+{
+    console.WriteLine("negative");
 }
