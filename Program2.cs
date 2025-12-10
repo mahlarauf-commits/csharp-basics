@@ -2,11 +2,16 @@
 Console.WriteLine("Enter a number:");
 int i = int.Parse(Console.ReadLine());
 
-if (i > 0) ;
+if (i > 0) 
 {
     Console.WriteLine("positive");
 }
+if(i==0)
+{
+    Console.WriteLine("the number is 0");
+}
 else
 {
-    console.WriteLine("negative");
+    Console.WriteLine("negative");
 }
+
