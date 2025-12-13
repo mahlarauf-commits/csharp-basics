@@ -1,13 +1,43 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Multiplication table one to five");
-for (int i = 1; i <= 5; i++) 
+// See https://aka.ms/new-console-template for more information
+using System.Reflection.Emit;
+bool isend = false;
+while (isend==false)
 {
-    for (int j = 1; j <= 5; j++) 
+
+    int num1 = 0;
+    int num2 = 0;
+    Console.WriteLine("welcom to the calculator app1");
+    Console.WriteLine("please enter a number");
+    num1 = int.Parse(Console.ReadLine());
+    Console.WriteLine("please enter another number");
+    num2 = int.Parse(Console.ReadLine());
+
+    Console.WriteLine("select the operation");
+    Console.WriteLine("a - add");
+    Console.WriteLine("s - subtract");
+    Console.WriteLine("m - multiply");
+    Console.WriteLine("d - divide");
+    Console.WriteLine("your operation?");
+
+    string operation = Console.ReadLine();
+    switch (operation)
     {
-        int result = i * j;
-        Console.Write(result + "\t"); 
+        case "a":
+            Console.WriteLine($"Result: {num1} + {num2} = " + (num1 + num2));
+            break;
+        case "s":
+            Console.WriteLine($"Result: {num1} - {num2} = " + (num1 - num2));
+            break;
+        case "m":
+            Console.WriteLine($"Result: {num1} * {num2} = " + (num1 * num2));
+            break;
+        case "d":
+            Console.WriteLine($"Result: {num1} / {num2} = " + (num1 / num2));
+            break;
+        default:
+            break;
     }
-    Console.WriteLine();
-    }
-Console.WriteLine("The multiplication table is complete!");
-Console.ReadKey();
+}
+Console.WriteLine("press 'exit' and enter to close theapp , or press any other key and enter to continue ");
+if (Console.ReadLine() == "exit")
+        isend = true;
