@@ -26,7 +26,15 @@ namespace WinFormsApp1
             message += "Insurance status:" + bime + Environment.NewLine;
             string takhasos = listBox1.SelectedItem.ToString();
             message += "your Expertise:" + takhasos + Environment.NewLine;
-            MessageBox.Show(message);
+            if (radioButton1.Checked == true)
+            {
+                message += "The male option was selected";
+            }
+            else if (radioButton2.Checked == true)
+            {
+                message += "The female option was selected";
+            }
+                MessageBox.Show(message);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
