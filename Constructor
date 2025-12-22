@@ -1,6 +1,9 @@
 // See https://aka.ms/new-console-template for more information
 using System.Net.Http.Headers;
 product product =  new product("Mahla Rauf" , 500000);
+Console.WriteLine(product);
+Console.WriteLine(product.MinPrice);
+
 public class product
 {
     public product(string Name):this (Name , 5000)
@@ -15,9 +18,14 @@ public class product
     public product()
     {
     }
+    static product()
+    {
+        MinPrice = 2000;
+    }
     public product(bool IsAvailable) => this .IsAvailable = IsAvailable;
 
     public string Name { get; set; }
     public int Price { get; set; }
     public bool IsAvailable{ get; set; }
+    public static int MinPrice;
 }
