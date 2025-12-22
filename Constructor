@@ -9,8 +9,8 @@ public class product
     }
     public product(string name , int price)
     {
-        Name = Name;
-        Price = Price;
+        Name = name;
+        Price = price;
     }
     public product()
     {
