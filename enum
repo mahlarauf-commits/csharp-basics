@@ -1,0 +1,20 @@
+// See https://aka.ms/new-console-template for more information
+game game = new game();
+//game.GameState = GameState.win;
+
+
+foreach (var item in Enum.GetValues(typeof(GameState)))
+{
+    Console.WriteLine(item.ToString());    
+}
+public class game
+{
+    public GameState GameState { get; set; }
+}
+
+public enum GameState : short
+{
+    win=100,
+    lost=101,
+    equal=102
+}
