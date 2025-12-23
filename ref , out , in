@@ -8,6 +8,13 @@ Console.WriteLine(product.Price);
 int x;
 int m= getnumber(out x);
 Console.WriteLine($"m = {m}, x = {x}");
+int result = chengeed(50);
+Console.WriteLine(result);
+
+static int chengeed(in int z)
+{
+    return z;
+}
 static int getnumber(out int x)
 {
     x = 100;
