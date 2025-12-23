@@ -3,7 +3,7 @@ cat cat1 = new cat();
 cat1.Id = 1;
 dog dog = new dog();
 dog.Id = 2;
-Console.WriteLine();   
+Console.WriteLine($"Cat Id: {cat1.Id}, Dog Id: {dog.Id}");   
 public struct test
 {
     //نمیتونن ارث بری کنن
