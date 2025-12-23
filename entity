@@ -1,0 +1,22 @@
+// See https://aka.ms/new-console-template for more information
+car car = new car();
+car.brand = "bmw";
+car.model = "x4";
+car.color = "black";
+car.Id = 1;
+Console.WriteLine();   
+
+
+  public class car
+{
+    public int Id { get; set; }
+    public string brand { get; set; }
+    public string model { get; set; }
+    public string color { get; set; }
+    public void Update(string brand , string model , string color)
+    {
+        this.brand = brand;
+        this.model = model; 
+        this.color = color;
+    }
+}
