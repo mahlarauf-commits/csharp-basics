@@ -1,0 +1,39 @@
+// See https://aka.ms/new-console-template for more information
+cat cat1 = new cat();
+cat1.Move();
+dog dog = new dog();
+dog.Id = 2;
+Console.WriteLine($"Cat Id: {cat1.Move}, Dog Id: {dog.Id}");
+cat cat2 = new cat();
+cat2.Name = "nazi";
+cat2.mustache = 1;
+cat2.Id = 100;
+Console.WriteLine(cat2.ToString());
+cat2.Move();
+
+public class animal
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public virtual void Move()
+    {
+        Console.WriteLine("animal.move");
+    }
+   
+}
+public class cat : animal
+{
+    public int mustache { get; set; }
+    public override void Move()
+    {
+        Console.WriteLine("cat.move");
+    }
+    public override string ToString()
+    {
+        return $"id :{Id} name :{Name} mustsche :{mustache}";
+    }
+}
+public class dog : animal
+{
+    public int speed { get; set; }
+}
