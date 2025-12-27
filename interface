@@ -1,0 +1,54 @@
+// See https://aka.ms/new-console-template for more information
+Console.WriteLine();
+Ilog log = new showinconsole();
+log.saveLog("test log");
+
+
+
+
+//مثال لاک گزاری
+public interface Ilog
+{
+    void saveLog(string messege);
+}
+public interface Ilog2 : Ilog
+{
+    void saveLog(List<string>messege);
+
+}
+public class test : Ilog2
+{
+    public void saveLog(List<string> messege)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void saveLog(string messege)
+    {
+        throw new NotImplementedException();
+    }
+}
+
+public class savetofile : Ilog
+{
+    public void saveLog(string messege)
+    { 
+        //کدها ذخیره لاگ
+
+    }
+}
+public class savelogtidatabase : Ilog
+{
+    public void saveLog(string messege)
+    {
+        //ذخیره در دیتابیس
+    }
+}
+
+public class showinconsole : Ilog
+{
+    public void saveLog(string messege)
+    {
+        Console.WriteLine(messege);
+    }
+}
